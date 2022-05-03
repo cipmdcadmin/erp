@@ -6,14 +6,16 @@
     "INVENTORY MANAGEMENT",
     "ORDER MANAGEMENT",
     "CHANGE MANAGEMENT",
-    "METRIC MANAGEMENT"
+    "METRIC MANAGEMENT",
+    "Page1"
   ],
   "publishedPageOrder": [
     "HOME",
     "INVENTORY MANAGEMENT",
     "ORDER MANAGEMENT",
     "CHANGE MANAGEMENT",
-    "METRIC MANAGEMENT"
+    "METRIC MANAGEMENT",
+    "Page1"
   ],
   "publishedDefaultPageName": "HOME",
   "unpublishedDefaultPageName": "HOME",
@@ -95,6 +97,14 @@
       "publishedUserSetOnLoad": false
     },
     "ORDER MANAGEMENT_updateCustomerInfo": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_netFetch": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_speQuery": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
