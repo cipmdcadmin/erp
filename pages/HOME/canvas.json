@@ -1,0 +1,273 @@
+{
+  "unpublishedPage": {
+    "name": "HOME",
+    "slug": "home",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1090,
+          "containerStyle": "none",
+          "snapRows": 109,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 57,
+          "minHeight": 1100,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "speMetrics",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "bb_hw",
+                "spe_hw",
+                "timestamp",
+                "rowIndex"
+              ],
+              "isVisibleDownload": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                }
+              ],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 41,
+              "bottomRow": 84,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.bb_hw.computedValue"
+                },
+                {
+                  "key": "primaryColumns.spe_hw.computedValue"
+                },
+                {
+                  "key": "primaryColumns.timestamp.computedValue"
+                },
+                {
+                  "key": "primaryColumns.rowIndex.computedValue"
+                }
+              ],
+              "leftColumn": 3,
+              "primaryColumns": {
+                "bb_hw": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "bb_hw",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "bb_hw",
+                  "computedValue": "{{speMetrics.sanitizedTableData.map((currentRow) => ( currentRow.bb_hw))}}",
+                  "iconName": ""
+                },
+                "spe_hw": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "spe_hw",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "spe_hw",
+                  "computedValue": "{{speMetrics.sanitizedTableData.map((currentRow) => ( currentRow.spe_hw))}}",
+                  "iconName": ""
+                },
+                "timestamp": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "timestamp",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "date",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "timestamp",
+                  "computedValue": "{{speMetrics.sanitizedTableData.map((currentRow) => ( currentRow.timestamp))}}",
+                  "iconName": "",
+                  "outputFormat": "YYYY-MM-DD HH:mm"
+                },
+                "rowIndex": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "rowIndex",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": false,
+                  "isDerived": false,
+                  "label": "rowIndex",
+                  "computedValue": "{{speMetrics.sanitizedTableData.map((currentRow) => ( currentRow.rowIndex))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "ho3y3pux77",
+              "derivedColumns": {},
+              "rightColumn": 33,
+              "textSize": "PARAGRAPH",
+              "widgetId": "85dmedzf16",
+              "isVisibleFilters": false,
+              "tableData": "{{speQuery.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": false,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": false,
+              "isVisiblePagination": false,
+              "primaryColumnId": "rowIndex",
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
+            },
+            {
+              "setAdaptiveYMin": true,
+              "widgetName": "Chart1",
+              "allowScroll": false,
+              "dynamicPropertyPathList": [],
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 1,
+              "bottomRow": 41,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "2s9lh54adt": {
+                  "seriesName": "Sales",
+                  "data": "{{\n  speQuery.data.slice(0).reverse().map((row) => {\n  return {\n    x: row.timestamp, \n    y: row.bb_hw,\n  };\n  });\n}}"
+                }
+              },
+              "animateLoading": true,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 3,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.2s9lh54adt.data"
+                }
+              ],
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "n8wicbfr9c",
+              "rightColumn": 62,
+              "widgetId": "iytpypk08w",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Days (SPE max = 60)",
+              "chartName": "BB SPE Report",
+              "xAxisName": "Sample date",
+              "chartType": "LINE_CHART"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "HOME_speQuery",
+              "name": "speQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "Chart1",
+          "MainContainer",
+          "speMetrics"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "HOME",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "625778c31c6927760e3ad89e_625785a31c6927760e3ad8c2"
+}

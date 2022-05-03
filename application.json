@@ -1,0 +1,20 @@
+{
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#F5D1D1",
+  "icon": "line-chart",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "createdAt": {
+    "seconds": 1649899715,
+    "nanos": 311000000
+  },
+  "deleted": false
+}
