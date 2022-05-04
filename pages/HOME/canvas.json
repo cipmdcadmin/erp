@@ -944,7 +944,7 @@
               "textSize": "PARAGRAPH",
               "widgetId": "7dh0t3mxvr",
               "isVisibleFilters": true,
-              "tableData": "{{netFetch.data.sort(function(a, b)\n\t\t\t\t\t\t\t\t\t\t {\n if(a.iso_dtg > b.iso_dtg) { return 1; }    \n\tif(a.iso_dtg < b.iso_dtg) { return -1; }\n\n    return 0;\n})\n}}",
+              "tableData": "{{netFetch.data.sort(function(a, b)\n\t\t\t\t\t\t\t\t\t\t {\n if(a.iso_dtg > b.iso_dtg) { return -1; }    \n\tif(a.iso_dtg < b.iso_dtg) { return 1; }\n\n    return 0;\n})\n}}",
               "isVisible": true,
               "label": "Data",
               "searchKey": "",
@@ -970,7 +970,8 @@
                 "obbu": 87,
                 "obbr": 85,
                 "timestamp": 221,
-                "v2bbkpi": 82
+                "v2bbkpi": 82,
+                "user": 111
               }
             }
           ]
