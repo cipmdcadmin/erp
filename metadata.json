@@ -40,6 +40,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "HOME_netFetchCopy": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "HOME_speQuery": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true

@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "netFetch",
+    "name": "netFetchCopy",
     "datasource": {
       "name": "spe_appsmith_demo_01",
       "pluginId": "google-sheets-plugin",
@@ -85,7 +85,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "pluginSpecifiedTemplates[9].value"
@@ -102,7 +102,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "HOME_netFetch",
+  "id": "HOME_netFetchCopy",
   "deleted": false,
-  "gitSyncId": "625778c31c6927760e3ad89e_626b4c99446d4029fd58f62d"
+  "gitSyncId": "625778c31c6927760e3ad89e_6271c28c446d4029fd58f738"
 }
