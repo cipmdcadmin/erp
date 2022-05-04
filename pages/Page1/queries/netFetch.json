@@ -85,7 +85,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "pluginSpecifiedTemplates[9].value"
