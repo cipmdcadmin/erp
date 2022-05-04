@@ -882,7 +882,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "user",
+                  "label": "updatedBy",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.user))}}"
                 },
                 "iso_dtg": {
@@ -899,7 +899,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "iso_dtg",
+                  "label": "updatedAt",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.iso_dtg))}}"
                 },
                 "comment": {
@@ -933,7 +933,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "v2bbkpi",
+                  "label": "bbKpi",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.v2bbkpi))}}"
                 }
               },
@@ -970,8 +970,9 @@
                 "obbu": 87,
                 "obbr": 85,
                 "timestamp": 221,
-                "v2bbkpi": 82,
-                "user": 111
+                "v2bbkpi": 71,
+                "user": 111,
+                "iso_dtg": 125
               }
             }
           ]
