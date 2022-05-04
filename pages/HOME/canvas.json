@@ -244,6 +244,7 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "mid",
+                "v2bbkpi",
                 "bb_issue_date",
                 "bb_combined_completion",
                 "Combined_HW_order",
@@ -261,8 +262,8 @@
                 "update_offset_bb_timestamp",
                 "offset_hw_order_date",
                 "offset_hw_reason",
-                "update_offset_hw_timestamp",
                 "create_offset_hw_timestamp",
+                "update_offset_hw_timestamp",
                 "v1_bb_kpi",
                 "v1_hw_kpi",
                 "v2_bb_kpi",
@@ -273,8 +274,7 @@
                 "timestamp",
                 "user",
                 "iso_dtg",
-                "comment",
-                "v2bbkpi"
+                "comment"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -291,10 +291,16 @@
               "dynamicTriggerPathList": [],
               "dynamicBindingPathList": [
                 {
-                  "key": "tableData"
+                  "key": "primaryColumns.name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.timestamp.computedValue"
                 },
                 {
                   "key": "primaryColumns.mid.computedValue"
+                },
+                {
+                  "key": "tableData"
                 },
                 {
                   "key": "primaryColumns.bb_issue_date.computedValue"
@@ -310,9 +316,6 @@
                 },
                 {
                   "key": "primaryColumns.provider.computedValue"
-                },
-                {
-                  "key": "primaryColumns.name.computedValue"
                 },
                 {
                   "key": "primaryColumns.address.computedValue"
@@ -375,9 +378,6 @@
                   "key": "primaryColumns.rowIndex.computedValue"
                 },
                 {
-                  "key": "primaryColumns.timestamp.computedValue"
-                },
-                {
                   "key": "primaryColumns.user.computedValue"
                 },
                 {
@@ -392,8 +392,42 @@
               ],
               "leftColumn": 20,
               "primaryColumns": {
+                "name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                },
+                "timestamp": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "timestamp",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "timestamp",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.timestamp))}}"
+                },
                 "mid": {
-                  "index": 0,
+                  "index": 1,
                   "width": 150,
                   "id": "mid",
                   "horizontalAlignment": "LEFT",
@@ -493,23 +527,6 @@
                   "isDerived": false,
                   "label": "provider",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.provider))}}"
-                },
-                "name": {
-                  "index": 6,
-                  "width": 150,
-                  "id": "name",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "name",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
                 },
                 "address": {
                   "index": 7,
@@ -810,7 +827,7 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": true,
+                  "isVisible": false,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
@@ -827,7 +844,7 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": true,
+                  "isVisible": false,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
@@ -851,23 +868,6 @@
                   "label": "rowIndex",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.rowIndex))}}"
                 },
-                "timestamp": {
-                  "index": 27,
-                  "width": 150,
-                  "id": "timestamp",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "timestamp",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.timestamp))}}"
-                },
                 "user": {
                   "index": 28,
                   "width": 150,
@@ -878,7 +878,7 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
@@ -895,7 +895,7 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
@@ -912,7 +912,7 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
@@ -944,7 +944,7 @@
               "textSize": "PARAGRAPH",
               "widgetId": "7dh0t3mxvr",
               "isVisibleFilters": true,
-              "tableData": "{{netFetch.data}}",
+              "tableData": "{{netFetch.data.sort(function(a, b)\n\t\t\t\t\t\t\t\t\t\t {\n if(a.iso_dtg > b.iso_dtg) { return 1; }    \n\tif(a.iso_dtg < b.iso_dtg) { return -1; }\n\n    return 0;\n})\n}}",
               "isVisible": true,
               "label": "Data",
               "searchKey": "",
@@ -968,7 +968,9 @@
                 "v2_bb_kpi": 92,
                 "v2_hw_kpi": 91,
                 "obbu": 87,
-                "obbr": 85
+                "obbr": 85,
+                "timestamp": 221,
+                "v2bbkpi": 82
               }
             }
           ]

@@ -1214,7 +1214,7 @@
                               "parentColumnSpace": 19.8125,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 26,
+                              "leftColumn": 27,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultText"
@@ -1225,7 +1225,7 @@
                               "isDisabled": false,
                               "key": "ae3pvdo99t",
                               "isRequired": false,
-                              "rightColumn": 63,
+                              "rightColumn": 64,
                               "widgetId": "m72f0ttf7a",
                               "isVisible": true,
                               "label": "",
@@ -1281,7 +1281,7 @@
                               "parentColumnSpace": 19.8125,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 10,
+                              "leftColumn": 12,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultText"
@@ -1292,7 +1292,7 @@
                               "isDisabled": false,
                               "key": "ae3pvdo99t",
                               "isRequired": false,
-                              "rightColumn": 25,
+                              "rightColumn": 27,
                               "widgetId": "zua1o6b8xm",
                               "isVisible": true,
                               "label": "",
@@ -1353,7 +1353,7 @@
                               "parentColumnSpace": 19.8125,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 23,
+                              "leftColumn": 25,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultText"
@@ -1425,7 +1425,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "NAME:",
                               "key": "rsmmjzs07x",
-                              "rightColumn": 23,
+                              "rightColumn": 25,
                               "textAlign": "LEFT",
                               "widgetId": "mxg46lui5i",
                               "isVisible": true,
@@ -1451,7 +1451,7 @@
                               "parentColumnSpace": 19.8125,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 10,
+                              "leftColumn": 12.000000000000002,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultText"
@@ -1462,7 +1462,7 @@
                               "isDisabled": false,
                               "key": "ae3pvdo99t",
                               "isRequired": false,
-                              "rightColumn": 25,
+                              "rightColumn": 27,
                               "widgetId": "16aqcbapz5",
                               "isVisible": true,
                               "label": "",
@@ -1492,7 +1492,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "PROVIDER:",
                               "key": "rsmmjzs07x",
-                              "rightColumn": 10,
+                              "rightColumn": 12,
                               "textAlign": "LEFT",
                               "widgetId": "bv7ee12cfr",
                               "isVisible": true,
