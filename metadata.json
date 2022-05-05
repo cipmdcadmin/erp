@@ -58,6 +58,18 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "INVENTORY MANAGEMENT_netFetch": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "INVENTORY MANAGEMENT_netFetchData.myFun1": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "INVENTORY MANAGEMENT_netFetchData.myFun2": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
     "INVENTORY MANAGEMENT_updateCustomerInfo": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false

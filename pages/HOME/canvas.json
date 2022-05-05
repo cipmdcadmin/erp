@@ -235,8 +235,8 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "yAxisName": "Days (SPE max = 60)",
-              "chartName": "BB SPE Report",
-              "xAxisName": "Sample date",
+              "chartName": "SPE Broadband Report",
+              "xAxisName": "DTG",
               "chartType": "LINE_CHART"
             },
             {
