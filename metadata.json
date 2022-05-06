@@ -98,6 +98,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "METRIC MANAGEMENT_trcFetch": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "ORDER MANAGEMENT_getCustomers": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
