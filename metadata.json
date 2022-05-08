@@ -3,33 +3,15 @@
   "serverSchemaVersion": 4,
   "pageOrder": [
     "HOME",
-    "INVENTORY MANAGEMENT",
-    "ORDER MANAGEMENT",
-    "CHANGE MANAGEMENT",
     "METRIC MANAGEMENT"
   ],
   "publishedPageOrder": [
     "HOME",
-    "INVENTORY MANAGEMENT",
-    "ORDER MANAGEMENT",
-    "CHANGE MANAGEMENT",
     "METRIC MANAGEMENT"
   ],
   "publishedDefaultPageName": "HOME",
   "unpublishedDefaultPageName": "HOME",
   "invisibleActionFields": {
-    "CHANGE MANAGEMENT_getCustomers": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "CHANGE MANAGEMENT_spe": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "CHANGE MANAGEMENT_updateCustomerInfo": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "HOME_getMetrics": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -46,34 +28,6 @@
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
     },
-    "INVENTORY MANAGEMENT_getCustomers": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "INVENTORY MANAGEMENT_getRegion": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "INVENTORY MANAGEMENT_getSpe": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "INVENTORY MANAGEMENT_netFetch": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "INVENTORY MANAGEMENT_netFetchData.myFun1": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "INVENTORY MANAGEMENT_netFetchData.myFun2": {
-      "unpublishedUserSetOnLoad": true,
-      "publishedUserSetOnLoad": true
-    },
-    "INVENTORY MANAGEMENT_updateCustomerInfo": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "METRIC MANAGEMENT_JSObject1.myFun1": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -82,9 +36,17 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "METRIC MANAGEMENT_Query1": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "METRIC MANAGEMENT_grossFetch": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
+    },
+    "METRIC MANAGEMENT_locationFetch": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     },
     "METRIC MANAGEMENT_netFetch": {
       "unpublishedUserSetOnLoad": false,
@@ -99,22 +61,6 @@
       "publishedUserSetOnLoad": false
     },
     "METRIC MANAGEMENT_trcFetch": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "ORDER MANAGEMENT_getCustomers": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "ORDER MANAGEMENT_speGet": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "ORDER MANAGEMENT_spePost": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "ORDER MANAGEMENT_updateCustomerInfo": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
