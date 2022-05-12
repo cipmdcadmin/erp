@@ -244,11 +244,10 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "mid",
-                "v2bbkpi",
                 "bb_issue_date",
                 "bb_combined_completion",
                 "Combined_HW_order",
-                "HW_completion_date_ms4_",
+                "ms4",
                 "provider",
                 "name",
                 "address",
@@ -274,7 +273,8 @@
                 "timestamp",
                 "user",
                 "iso_dtg",
-                "comment"
+                "comment",
+                "v2bbkpi"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -310,9 +310,6 @@
                 },
                 {
                   "key": "primaryColumns.Combined_HW_order.computedValue"
-                },
-                {
-                  "key": "primaryColumns.HW_completion_date_ms4_.computedValue"
                 },
                 {
                   "key": "primaryColumns.provider.computedValue"
@@ -388,6 +385,9 @@
                 },
                 {
                   "key": "primaryColumns.v2bbkpi.computedValue"
+                },
+                {
+                  "key": "primaryColumns.ms4.computedValue"
                 }
               ],
               "leftColumn": 20,
@@ -493,23 +493,6 @@
                   "isDerived": false,
                   "label": "Combined_HW_order",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Combined_HW_order))}}"
-                },
-                "HW_completion_date_ms4_": {
-                  "index": 4,
-                  "width": 150,
-                  "id": "HW_completion_date_ms4_",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "HW_completion_date_ms4_",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.HW_completion_date_ms4_))}}"
                 },
                 "provider": {
                   "index": 5,
@@ -925,7 +908,7 @@
                   "id": "v2bbkpi",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "number",
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
@@ -934,7 +917,25 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "bbKpi",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.v2bbkpi))}}"
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.v2bbkpi))}}",
+                  "iconName": ""
+                },
+                "ms4": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "ms4",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "ms4",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ms4))}}"
                 }
               },
               "delimiter": ",",

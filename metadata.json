@@ -63,6 +63,22 @@
     "METRIC MANAGEMENT_trcFetch": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
+    },
+    "METRIC MANAGEMENT_utils.locationTransform": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "METRIC MANAGEMENT_utils.netFetchTransform": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "METRIC MANAGEMENT_utils.trcFetchTransform": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "METRIC MANAGEMENT_utils.trcsearch": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
     }
   },
   "publishedTheme": {

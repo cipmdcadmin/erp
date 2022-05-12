@@ -45,11 +45,11 @@
         },
         {
           "key": "rowLimit",
-          "value": "10"
+          "value": "1000"
         },
         {
           "key": "sheetName",
-          "value": "Sheet1"
+          "value": "load"
         },
         {
           "key": "rowOffset",
@@ -84,7 +84,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
