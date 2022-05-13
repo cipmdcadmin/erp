@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
-    "name": "utils",
-    "pageId": "METRIC MANAGEMENT",
+    "name": "utils2",
+    "pageId": "Page1",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +9,7 @@
     "body": "export default {\n\n\ttrcFetchTransform: (data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.MID,\n\t\t\treason: d.Reason,\n\t\t\ttrcUpdatedAt: d.Timestamp,\n\t\t\tfiles: d.Upload_Files,\n\t\t\tdown: d.DownSpeed,\n\t\t\tup: d.UpSpeed,\n\t\t}))\t\n\t},\n\t\n\tnetFetchTransform: (data) => {\n\t\treturn data.map(d => ({\n\t\t\t\tmid: d.mid,\n\t\t\t\torder: d.bb_issue_date,\n\t\t\t\tconnected: d.bb_combined_completion,\n\t\t\t\thw_order: d.Combined_HW_order,\n\t\t\t\tinstalled: d.ms4,\n\t\t\t\tprovider: d.provider,\n\t\t\t\tname: d.name,\n\t\t\t\tapplication: d.application_date,\n\t\t\t\thw_cause: d.hw_cause,\n\t\t\t\tbb_cause: d.bb_cause,\n\t\t\t\tobbu: d.obbu,\n\t\t\t\tobbr: d.obbr,\n\t\t\t\tuser: d.user,\n\t\t\t\tupdatedAt: d.iso_dtg,\n\t\t\t\tcomment: d.comment,\n\t\t\t\tbb_kpi: d.v2bbkpi,\n    }))\n\t},\n\t\n\tlocationTransform: (data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\tlat: Number(d.lat),\n\t\t\tlong: Number(d.long),\n\t\t\tgmaps: d.gmaps,\n\t\t\tbmaps: d.bmaps,\n\t\t\tmmaps: d.mmaps,\n\t\t\tdistrict: d.district,\n\t\t\tregion: d.region,\n\t\t}))\t\n\t},\n\t\n\ttrcsearch: (data) => {\n\t\treturn data.map(d =>({\n\t\t\tlat: Number(d.lat)\n\t\t}))\n\t},\n}",
     "variables": []
   },
-  "id": "METRIC MANAGEMENT_utils",
+  "id": "Page1_utils2",
   "deleted": false,
-  "gitSyncId": "625778c31c6927760e3ad89e_62784c5ec2dcdc4596e15796"
+  "gitSyncId": "625778c31c6927760e3ad89e_627da2dac2dcdc4596e1582a"
 }

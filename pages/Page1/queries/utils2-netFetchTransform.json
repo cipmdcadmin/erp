@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "netFetchTransform",
-    "fullyQualifiedName": "utils.netFetchTransform",
+    "fullyQualifiedName": "utils2.netFetchTransform",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "METRIC MANAGEMENT",
-    "collectionId": "METRIC MANAGEMENT_utils",
+    "pageId": "Page1",
+    "collectionId": "Page1_utils2",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -44,7 +44,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "METRIC MANAGEMENT_utils.netFetchTransform",
+  "id": "Page1_utils2.netFetchTransform",
   "deleted": false,
-  "gitSyncId": "625778c31c6927760e3ad89e_627c7374c2dcdc4596e15809"
+  "gitSyncId": "625778c31c6927760e3ad89e_627da2dac2dcdc4596e15822"
 }

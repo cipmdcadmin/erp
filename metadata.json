@@ -3,11 +3,13 @@
   "serverSchemaVersion": 4,
   "pageOrder": [
     "HOME",
-    "METRIC MANAGEMENT"
+    "METRIC MANAGEMENT",
+    "Page1"
   ],
   "publishedPageOrder": [
     "HOME",
-    "METRIC MANAGEMENT"
+    "METRIC MANAGEMENT",
+    "Page1"
   ],
   "publishedDefaultPageName": "HOME",
   "unpublishedDefaultPageName": "HOME",
@@ -77,6 +79,30 @@
       "publishedUserSetOnLoad": false
     },
     "METRIC MANAGEMENT_utils.trcsearch": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_locationFetch2": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_netFetch2": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_utils2.locationTransform": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_utils2.netFetchTransform": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_utils2.trcFetchTransform": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_utils2.trcsearch": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
