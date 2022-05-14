@@ -4513,7 +4513,7 @@
                           "id": "alarm_installation",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "date",
                           "textSize": "PARAGRAPH",
                           "enableFilter": true,
                           "enableSort": true,
@@ -4522,7 +4522,9 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "alarm_installation",
-                          "computedValue": "{{fenzTable.sanitizedTableData.map((currentRow) => ( currentRow.alarm_installation))}}"
+                          "computedValue": "{{fenzTable.sanitizedTableData.map((currentRow) => ( currentRow.alarm_installation))}}",
+                          "iconName": "",
+                          "outputFormat": "YYYY-MM-DD"
                         },
                         "files": {
                           "index": 2,
@@ -4530,7 +4532,7 @@
                           "id": "files",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "url",
                           "textSize": "PARAGRAPH",
                           "enableFilter": true,
                           "enableSort": true,
@@ -4539,7 +4541,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "files",
-                          "computedValue": "{{fenzTable.sanitizedTableData.map((currentRow) => ( currentRow.files))}}"
+                          "computedValue": "{{fenzTable.sanitizedTableData.map((currentRow) => ( currentRow.files))}}",
+                          "iconName": ""
                         }
                       },
                       "delimiter": ",",
