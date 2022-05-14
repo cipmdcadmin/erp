@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\talarm_installation: d.alarm_installation,\n\t\t\tfiles: d.smoke_trc,\n\t\t}))\t\n\t}",
+      "body": "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\talarm_installation: d.alarm_installation,\n\t\t\ttrc_files1: d.trc_files1,\n\t\t\ttrc_files2: d.trc_files2,\n\t\t\ttrc_files3: d.trc_files3,\n\t\t\ttrc_files4: d.trc_files4,\n\t\t\ttrc_files5: d.trc_files5, \n\t\t\ttrc_files6: d.trc_files6,\n\t\t\ttrc_files7: d.trc_files7,\n\t\t\ttrc_files8: d.trc_files8,\n\t\t\ttrc_files9: d.trc_files9,\n\t\t\tfile1: d.file1,\n\t\t\tfile2: d.file2,\n\t\t\t}))\t\n\t}",
       "jsArguments": [
         {
           "name": "data"
@@ -37,7 +37,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\talarm_installation: d.alarm_installation,\n\t\t\tfiles: d.smoke_trc,\n\t\t}))\t\n\t}"
+      "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\talarm_installation: d.alarm_installation,\n\t\t\ttrc_files1: d.trc_files1,\n\t\t\ttrc_files2: d.trc_files2,\n\t\t\ttrc_files3: d.trc_files3,\n\t\t\ttrc_files4: d.trc_files4,\n\t\t\ttrc_files5: d.trc_files5, \n\t\t\ttrc_files6: d.trc_files6,\n\t\t\ttrc_files7: d.trc_files7,\n\t\t\ttrc_files8: d.trc_files8,\n\t\t\ttrc_files9: d.trc_files9,\n\t\t\tfile1: d.file1,\n\t\t\tfile2: d.file2,\n\t\t\t}))\t\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
