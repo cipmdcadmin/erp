@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "locationTransform",
-    "fullyQualifiedName": "utils.locationTransform",
+    "name": "alarmFetchTransform",
+    "fullyQualifiedName": "utils.alarmFetchTransform",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\taddress: d.address,\n\t\t\tregion: d.region,\n\t\t\tdistrict: d.district,\n\t\t\tgmaps: d.gmaps,\n\t\t\tbmaps: d.bmaps,\n\t\t\tmmaps: d.mmaps,\n\t\t\tlat: Number(d.lat),\n\t\t\tlong: Number(d.long),\n\n\t\t}))\t\n\t}",
+      "body": "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\talarm_installation: d.alarm_installation,\n\t\t\tfiles: d.smoke_trc,\n\t\t}))\t\n\t}",
       "jsArguments": [
         {
           "name": "data"
@@ -37,14 +37,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\taddress: d.address,\n\t\t\tregion: d.region,\n\t\t\tdistrict: d.district,\n\t\t\tgmaps: d.gmaps,\n\t\t\tbmaps: d.bmaps,\n\t\t\tmmaps: d.mmaps,\n\t\t\tlat: Number(d.lat),\n\t\t\tlong: Number(d.long),\n\n\t\t}))\t\n\t}"
+      "(data) => {\n\t\treturn data.map(d => ({\n\t\t\tmid: d.mid,\n\t\t\talarm_installation: d.alarm_installation,\n\t\t\tfiles: d.smoke_trc,\n\t\t}))\t\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "METRIC MANAGEMENT_utils.locationTransform",
+  "id": "METRIC MANAGEMENT_utils.alarmFetchTransform",
   "deleted": false,
-  "gitSyncId": "625778c31c6927760e3ad89e_627c0bc0c2dcdc4596e157ee"
+  "gitSyncId": "625778c31c6927760e3ad89e_627f6a95b4811f01e2fa6d6c"
 }

@@ -42,6 +42,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "METRIC MANAGEMENT_alarmFetch": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "METRIC MANAGEMENT_grossFetch": {
       "unpublishedUserSetOnLoad": true,
       "publishedUserSetOnLoad": true
@@ -66,6 +70,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "METRIC MANAGEMENT_utils.alarmFetchTransform": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "METRIC MANAGEMENT_utils.locationTransform": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
@@ -87,6 +95,10 @@
       "publishedUserSetOnLoad": false
     },
     "Page1_netFetch2": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Page1_utils2.filterProviders": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

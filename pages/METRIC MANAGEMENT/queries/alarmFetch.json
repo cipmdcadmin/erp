@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "Query1",
+    "name": "alarmFetch",
     "datasource": {
       "name": "spe_appsmith_demo_01",
       "pluginId": "google-sheets-plugin",
@@ -25,7 +25,7 @@
         },
         {
           "key": "sheetUrl",
-          "value": ""
+          "value": "https://docs.google.com/spreadsheets/d/1D6A0nflj__dzF_orVdJnCWC4UtlFOVZ2gty1ZSxavmY/edit#gid=957952072"
         },
         {
           "key": "range",
@@ -45,11 +45,11 @@
         },
         {
           "key": "rowLimit",
-          "value": "10"
+          "value": "1000"
         },
         {
           "key": "sheetName",
-          "value": "Sheet1"
+          "value": "load"
         },
         {
           "key": "rowOffset",
@@ -84,7 +84,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -95,7 +95,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "METRIC MANAGEMENT_Query1",
+  "id": "METRIC MANAGEMENT_alarmFetch",
   "deleted": false,
-  "gitSyncId": "625778c31c6927760e3ad89e_62757189d00eaf0be11c80f4"
+  "gitSyncId": "625778c31c6927760e3ad89e_627f6750b4811f01e2fa6d6a"
 }

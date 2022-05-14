@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 2780,
+          "bottomRow": 2170,
           "containerStyle": "none",
           "snapRows": 109,
           "parentRowSpace": 1,
@@ -4146,7 +4146,7 @@
                           "widgetId": "mpxqltudju",
                           "containerStyle": "none",
                           "topRow": 0,
-                          "bottomRow": 420,
+                          "bottomRow": 390,
                           "parentRowSpace": 1,
                           "isVisible": true,
                           "type": "CANVAS_WIDGET",
@@ -4161,38 +4161,24 @@
                           "leftColumn": 0,
                           "children": [
                             {
-                              "widgetName": "locationData",
+                              "widgetName": "locationTable",
                               "defaultPageSize": 0,
                               "columnOrder": [
                                 "mid",
-                                "lat",
-                                "long",
+                                "address",
+                                "region",
+                                "district",
                                 "gmaps",
                                 "bmaps",
                                 "mmaps",
-                                "district",
-                                "region",
-                                "order",
-                                "connected",
-                                "hw_order",
-                                "installed",
-                                "provider",
-                                "name",
-                                "applicaiton",
-                                "hw_cause",
-                                "bb_cause",
-                                "obbu",
-                                "obbr",
-                                "user",
-                                "updatedAt",
-                                "comment",
-                                "bb_kpi"
+                                "lat",
+                                "long"
                               ],
                               "isVisibleDownload": true,
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
                               "iconSVG": "/static/media/icon.db8a9cbd.svg",
-                              "topRow": 1,
+                              "topRow": 0,
                               "bottomRow": 34,
                               "isSortable": true,
                               "parentRowSpace": 10,
@@ -4210,13 +4196,19 @@
                                   "key": "primaryColumns.mid.computedValue"
                                 },
                                 {
+                                  "key": "primaryColumns.address.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.region.computedValue"
+                                },
+                                {
                                   "key": "primaryColumns.lat.computedValue"
                                 },
                                 {
                                   "key": "primaryColumns.long.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.region.computedValue"
+                                  "key": "primaryColumns.district.computedValue"
                                 },
                                 {
                                   "key": "primaryColumns.gmaps.computedValue"
@@ -4226,57 +4218,9 @@
                                 },
                                 {
                                   "key": "primaryColumns.mmaps.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.district.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.order.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.connected.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.hw_order.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.installed.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.provider.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.name.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.applicaiton.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.hw_cause.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.bb_cause.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.obbu.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.obbr.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.user.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.updatedAt.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.comment.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.bb_kpi.computedValue"
                                 }
                               ],
-                              "leftColumn": 36,
+                              "leftColumn": 0,
                               "primaryColumns": {
                                 "mid": {
                                   "index": 0,
@@ -4293,29 +4237,12 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "mid",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.mid))}}"
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.mid))}}"
                                 },
-                                "lat": {
-                                  "index": 1,
-                                  "width": 150,
-                                  "id": "lat",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "lat",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.lat))}}"
-                                },
-                                "long": {
+                                "address": {
                                   "index": 2,
                                   "width": 150,
-                                  "id": "long",
+                                  "id": "address",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
@@ -4326,11 +4253,11 @@
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "long",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.long))}}"
+                                  "label": "address",
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.address))}}"
                                 },
                                 "region": {
-                                  "index": 4,
+                                  "index": 3,
                                   "width": 150,
                                   "id": "region",
                                   "horizontalAlignment": "LEFT",
@@ -4344,61 +4271,44 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "region",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.region))}}"
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.region))}}"
                                 },
-                                "gmaps": {
+                                "lat": {
                                   "index": 4,
                                   "width": 150,
-                                  "id": "gmaps",
+                                  "id": "lat",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
                                   "textSize": "PARAGRAPH",
                                   "enableFilter": true,
                                   "enableSort": true,
-                                  "isVisible": true,
+                                  "isVisible": false,
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "gmaps",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.gmaps))}}"
+                                  "label": "lat",
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.lat))}}"
                                 },
-                                "bmaps": {
+                                "long": {
                                   "index": 5,
                                   "width": 150,
-                                  "id": "bmaps",
+                                  "id": "long",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
                                   "textSize": "PARAGRAPH",
                                   "enableFilter": true,
                                   "enableSort": true,
-                                  "isVisible": true,
+                                  "isVisible": false,
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "bmaps",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.bmaps))}}"
-                                },
-                                "mmaps": {
-                                  "index": 6,
-                                  "width": 150,
-                                  "id": "mmaps",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "mmaps",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.mmaps))}}"
+                                  "label": "long",
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.long))}}"
                                 },
                                 "district": {
-                                  "index": 7,
+                                  "index": 6,
                                   "width": 150,
                                   "id": "district",
                                   "horizontalAlignment": "LEFT",
@@ -4412,12 +4322,29 @@
                                   "isCellVisible": true,
                                   "isDerived": false,
                                   "label": "district",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.district))}}"
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.district))}}"
                                 },
-                                "order": {
+                                "gmaps": {
+                                  "index": 7,
+                                  "width": 150,
+                                  "id": "gmaps",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textSize": "PARAGRAPH",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "gmaps",
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.gmaps))}}"
+                                },
+                                "bmaps": {
                                   "index": 8,
                                   "width": 150,
-                                  "id": "order",
+                                  "id": "bmaps",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
@@ -4428,13 +4355,13 @@
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "order",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.order))}}"
+                                  "label": "bmaps",
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.bmaps))}}"
                                 },
-                                "connected": {
+                                "mmaps": {
                                   "index": 9,
                                   "width": 150,
-                                  "id": "connected",
+                                  "id": "mmaps",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
@@ -4445,239 +4372,18 @@
                                   "isDisabled": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "connected",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.connected))}}"
-                                },
-                                "hw_order": {
-                                  "index": 10,
-                                  "width": 150,
-                                  "id": "hw_order",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "hw_order",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.hw_order))}}"
-                                },
-                                "installed": {
-                                  "index": 11,
-                                  "width": 150,
-                                  "id": "installed",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "installed",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.installed))}}"
-                                },
-                                "provider": {
-                                  "index": 12,
-                                  "width": 150,
-                                  "id": "provider",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "provider",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.provider))}}"
-                                },
-                                "name": {
-                                  "index": 13,
-                                  "width": 150,
-                                  "id": "name",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "name",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
-                                },
-                                "applicaiton": {
-                                  "index": 14,
-                                  "width": 150,
-                                  "id": "applicaiton",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "applicaiton",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.applicaiton))}}"
-                                },
-                                "hw_cause": {
-                                  "index": 15,
-                                  "width": 150,
-                                  "id": "hw_cause",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "hw_cause",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.hw_cause))}}"
-                                },
-                                "bb_cause": {
-                                  "index": 16,
-                                  "width": 150,
-                                  "id": "bb_cause",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "bb_cause",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.bb_cause))}}"
-                                },
-                                "obbu": {
-                                  "index": 17,
-                                  "width": 150,
-                                  "id": "obbu",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "obbu",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.obbu))}}"
-                                },
-                                "obbr": {
-                                  "index": 18,
-                                  "width": 150,
-                                  "id": "obbr",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "obbr",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.obbr))}}"
-                                },
-                                "user": {
-                                  "index": 19,
-                                  "width": 150,
-                                  "id": "user",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "user",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.user))}}"
-                                },
-                                "updatedAt": {
-                                  "index": 20,
-                                  "width": 150,
-                                  "id": "updatedAt",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "updatedAt",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.updatedAt))}}"
-                                },
-                                "comment": {
-                                  "index": 21,
-                                  "width": 150,
-                                  "id": "comment",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "comment",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.comment))}}"
-                                },
-                                "bb_kpi": {
-                                  "index": 22,
-                                  "width": 150,
-                                  "id": "bb_kpi",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "PARAGRAPH",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "bb_kpi",
-                                  "computedValue": "{{locationData.sanitizedTableData.map((currentRow) => ( currentRow.bb_kpi))}}"
+                                  "label": "mmaps",
+                                  "computedValue": "{{locationTable.sanitizedTableData.map((currentRow) => ( currentRow.mmaps))}}"
                                 }
                               },
                               "delimiter": ",",
                               "key": "7h2tg7p6sg",
                               "derivedColumns": {},
-                              "rightColumn": 63,
+                              "rightColumn": 57,
                               "textSize": "PARAGRAPH",
-                              "widgetId": "lxfrsskw58",
+                              "widgetId": "vnc52plp8m",
                               "isVisibleFilters": true,
-                              "tableData": "{{\n\n\nfunction(){\n\t\n\tlet combined = utils.locationTransform(locationFetch.data).map((item) => {\n   \t\tconst user = utils.netFetchTransform(netFetch.data).find((userItem) => item.mid == userItem.mid) || {};\n   \t\treturn { ...item, ...user };\n\t\t})\n\t\treturn combined;\n\t\n}\n().filter(item => item.mid == matchmid.text)\n}}\n\n\n",
+                              "tableData": "{{utils.locationTransform( locationFetch.data).filter(item => item.mid == matchmid.text)}}",
                               "isVisible": true,
                               "label": "Data",
                               "searchKey": "",
@@ -4694,7 +4400,9 @@
                               "columnSizeMap": {
                                 "task": 245,
                                 "step": 62,
-                                "status": 75
+                                "status": 75,
+                                "mid": 73,
+                                "address": 253
                               }
                             }
                           ],
@@ -4743,7 +4451,127 @@
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
-                  "children": [],
+                  "children": [
+                    {
+                      "widgetName": "fenzTable",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "mid",
+                        "alarm_installation",
+                        "files"
+                      ],
+                      "isVisibleDownload": true,
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                      "topRow": 1,
+                      "bottomRow": 17,
+                      "isSortable": true,
+                      "parentRowSpace": 10,
+                      "type": "TABLE_WIDGET",
+                      "defaultSelectedRow": "0",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 19.5,
+                      "dynamicTriggerPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.mid.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.alarm_installation.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.files.computedValue"
+                        }
+                      ],
+                      "leftColumn": 0,
+                      "primaryColumns": {
+                        "mid": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "mid",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "mid",
+                          "computedValue": "{{fenzTable.sanitizedTableData.map((currentRow) => ( currentRow.mid))}}"
+                        },
+                        "alarm_installation": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "alarm_installation",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "alarm_installation",
+                          "computedValue": "{{fenzTable.sanitizedTableData.map((currentRow) => ( currentRow.alarm_installation))}}"
+                        },
+                        "files": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "files",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "files",
+                          "computedValue": "{{fenzTable.sanitizedTableData.map((currentRow) => ( currentRow.files))}}"
+                        }
+                      },
+                      "delimiter": ",",
+                      "key": "7h2tg7p6sg",
+                      "derivedColumns": {},
+                      "rightColumn": 47,
+                      "textSize": "PARAGRAPH",
+                      "widgetId": "ef72jejvu8",
+                      "isVisibleFilters": true,
+                      "tableData": "{{utils.alarmFetchTransform( alarmFetch.data).filter(item => item.mid == matchmid.text)}}\n\n\n",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "enableClientSideSearch": true,
+                      "version": 3,
+                      "totalRecordsCount": 0,
+                      "parentId": "5c4uz19kys",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "isVisiblePagination": true,
+                      "primaryColumnId": "mid",
+                      "verticalAlignment": "CENTER",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "files": 315
+                      }
+                    }
+                  ],
                   "isDisabled": false,
                   "key": "0lzwsl4j4i",
                   "tabName": "Partner",
@@ -5563,7 +5391,7 @@
                       "displayName": "Table",
                       "iconSVG": "/static/media/icon.db8a9cbd.svg",
                       "topRow": 2,
-                      "bottomRow": 19,
+                      "bottomRow": 28,
                       "isSortable": true,
                       "parentRowSpace": 10,
                       "type": "TABLE_WIDGET",
@@ -5832,108 +5660,6 @@
                         "mid": 62,
                         "Upload_Files_": 462
                       }
-                    },
-                    {
-                      "widgetName": "ButtonGroup1",
-                      "isCanvas": false,
-                      "displayName": "Button Group",
-                      "iconSVG": "/static/media/icon.d6773218.svg",
-                      "topRow": 64,
-                      "bottomRow": 68,
-                      "parentRowSpace": 10,
-                      "groupButtons": {
-                        "groupButton1": {
-                          "label": "Favorite",
-                          "iconName": "heart",
-                          "id": "groupButton1",
-                          "widgetId": "",
-                          "buttonColor": "#03B365",
-                          "buttonType": "SIMPLE",
-                          "placement": "CENTER",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 0,
-                          "menuItems": {}
-                        },
-                        "groupButton2": {
-                          "label": "Add",
-                          "iconName": "add",
-                          "id": "groupButton2",
-                          "buttonColor": "#03B365",
-                          "buttonType": "SIMPLE",
-                          "placement": "CENTER",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 1,
-                          "menuItems": {}
-                        },
-                        "groupButton3": {
-                          "label": "More",
-                          "iconName": "more",
-                          "id": "groupButton3",
-                          "buttonType": "MENU",
-                          "placement": "CENTER",
-                          "buttonColor": "#03B365",
-                          "widgetId": "",
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "index": 2,
-                          "menuItems": {
-                            "menuItem1": {
-                              "label": "First Option",
-                              "backgroundColor": "#FFFFFF",
-                              "id": "menuItem1",
-                              "widgetId": "",
-                              "onClick": "",
-                              "isVisible": true,
-                              "isDisabled": false,
-                              "index": 0
-                            },
-                            "menuItem2": {
-                              "label": "Second Option",
-                              "backgroundColor": "#FFFFFF",
-                              "id": "menuItem2",
-                              "widgetId": "",
-                              "onClick": "",
-                              "isVisible": true,
-                              "isDisabled": false,
-                              "index": 1
-                            },
-                            "menuItem3": {
-                              "label": "Delete",
-                              "iconName": "trash",
-                              "iconColor": "#FFFFFF",
-                              "iconAlign": "right",
-                              "textColor": "#FFFFFF",
-                              "backgroundColor": "#DD4B34",
-                              "id": "menuItem3",
-                              "widgetId": "",
-                              "onClick": "",
-                              "isVisible": true,
-                              "isDisabled": false,
-                              "index": 2
-                            }
-                          }
-                        }
-                      },
-                      "type": "BUTTON_GROUP_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 19.5,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 6,
-                      "dynamicBindingPathList": [],
-                      "key": "cm1j3s5fe4",
-                      "orientation": "horizontal",
-                      "rightColumn": 30,
-                      "widgetId": "yilghwk3qw",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "c09njyrffp",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "buttonVariant": "PRIMARY"
                     }
                   ],
                   "key": "0lzwsl4j4i",
@@ -5969,6 +5695,7 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "mid",
+                        "address",
                         "lat",
                         "long",
                         "gmaps",
@@ -5982,7 +5709,7 @@
                         "installed",
                         "provider",
                         "name",
-                        "applicaiton",
+                        "application",
                         "hw_cause",
                         "bb_cause",
                         "obbu",
@@ -6053,9 +5780,6 @@
                           "key": "primaryColumns.name.computedValue"
                         },
                         {
-                          "key": "primaryColumns.applicaiton.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.hw_cause.computedValue"
                         },
                         {
@@ -6078,6 +5802,12 @@
                         },
                         {
                           "key": "primaryColumns.bb_kpi.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.application.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.address.computedValue"
                         }
                       ],
                       "leftColumn": 37,
@@ -6320,23 +6050,6 @@
                           "label": "name",
                           "computedValue": "{{leftJoinCombine.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
                         },
-                        "applicaiton": {
-                          "index": 14,
-                          "width": 150,
-                          "id": "applicaiton",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "PARAGRAPH",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "applicaiton",
-                          "computedValue": "{{leftJoinCombine.sanitizedTableData.map((currentRow) => ( currentRow.applicaiton))}}"
-                        },
                         "hw_cause": {
                           "index": 15,
                           "width": 150,
@@ -6472,6 +6185,40 @@
                           "isDerived": false,
                           "label": "bb_kpi",
                           "computedValue": "{{leftJoinCombine.sanitizedTableData.map((currentRow) => ( currentRow.bb_kpi))}}"
+                        },
+                        "application": {
+                          "index": 14,
+                          "width": 150,
+                          "id": "application",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "application",
+                          "computedValue": "{{leftJoinCombine.sanitizedTableData.map((currentRow) => ( currentRow.application))}}"
+                        },
+                        "address": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "address",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "address",
+                          "computedValue": "{{leftJoinCombine.sanitizedTableData.map((currentRow) => ( currentRow.address))}}"
                         }
                       },
                       "delimiter": ",",
@@ -6529,7 +6276,7 @@
                   "index": 0
                 },
                 "tab2": {
-                  "label": "Partner",
+                  "label": "FENZ",
                   "id": "tab2",
                   "widgetId": "5c4uz19kys",
                   "isVisible": true,
@@ -6599,311 +6346,9 @@
               "fontSize": "HEADING1"
             },
             {
-              "widgetName": "Table2",
-              "defaultPageSize": 0,
-              "columnOrder": [
-                "mid",
-                "address",
-                "region",
-                "lat",
-                "long",
-                "district",
-                "rowIndex",
-                "gmaps",
-                "bmaps",
-                "mmaps"
-              ],
-              "isVisibleDownload": true,
-              "dynamicPropertyPathList": [],
-              "displayName": "Table",
-              "iconSVG": "/static/media/icon.db8a9cbd.svg",
-              "topRow": 255,
-              "bottomRow": 276,
-              "isSortable": true,
-              "parentRowSpace": 10,
-              "type": "TABLE_WIDGET",
-              "defaultSelectedRow": "0",
-              "hideCard": false,
-              "animateLoading": true,
-              "parentColumnSpace": 19.8125,
-              "dynamicTriggerPathList": [],
-              "dynamicBindingPathList": [
-                {
-                  "key": "primaryColumns.mid.computedValue"
-                },
-                {
-                  "key": "primaryColumns.lat.computedValue"
-                },
-                {
-                  "key": "primaryColumns.long.computedValue"
-                },
-                {
-                  "key": "primaryColumns.district.computedValue"
-                },
-                {
-                  "key": "primaryColumns.region.computedValue"
-                },
-                {
-                  "key": "tableData"
-                },
-                {
-                  "key": "primaryColumns.address.computedValue"
-                },
-                {
-                  "key": "primaryColumns.rowIndex.computedValue"
-                },
-                {
-                  "key": "primaryColumns.gmaps.computedValue"
-                },
-                {
-                  "key": "primaryColumns.bmaps.computedValue"
-                },
-                {
-                  "key": "primaryColumns.mmaps.computedValue"
-                }
-              ],
-              "leftColumn": 44,
-              "primaryColumns": {
-                "mid": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "mid",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "mid",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.mid))}}",
-                  "iconName": ""
-                },
-                "lat": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "lat",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "lat",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.lat))}}"
-                },
-                "long": {
-                  "index": 2,
-                  "width": 150,
-                  "id": "long",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "long",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.long))}}"
-                },
-                "district": {
-                  "index": 6,
-                  "width": 150,
-                  "id": "district",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "district",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.district))}}"
-                },
-                "region": {
-                  "index": 7,
-                  "width": 150,
-                  "id": "region",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "region",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.region))}}"
-                },
-                "address": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "address",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "address",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.address))}}"
-                },
-                "rowIndex": {
-                  "index": 6,
-                  "width": 150,
-                  "id": "rowIndex",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "rowIndex",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.rowIndex))}}"
-                },
-                "gmaps": {
-                  "index": 7,
-                  "width": 150,
-                  "id": "gmaps",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "gmaps",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.gmaps))}}"
-                },
-                "bmaps": {
-                  "index": 8,
-                  "width": 150,
-                  "id": "bmaps",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "bmaps",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.bmaps))}}"
-                },
-                "mmaps": {
-                  "index": 9,
-                  "width": 150,
-                  "id": "mmaps",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "mmaps",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.mmaps))}}"
-                }
-              },
-              "delimiter": ",",
-              "key": "xtq7qs31oj",
-              "derivedColumns": {},
-              "rightColumn": 63,
-              "textSize": "PARAGRAPH",
-              "widgetId": "di4yh1k6k8",
-              "isVisibleFilters": true,
-              "tableData": "{{locationFetch.data.filter(item => \n\titem.mid == SPETable1.selectedRow.mid)\n}}",
-              "isVisible": true,
-              "label": "Data",
-              "searchKey": "",
-              "enableClientSideSearch": true,
-              "version": 3,
-              "totalRecordsCount": 0,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "horizontalAlignment": "LEFT",
-              "isVisibleSearch": true,
-              "isVisiblePagination": true,
-              "verticalAlignment": "CENTER",
-              "columnSizeMap": {
-                "task": 245,
-                "step": 62,
-                "status": 75,
-                "name": 238,
-                "mid": 70
-              }
-            },
-            {
-              "widgetName": "Text2",
-              "displayName": "Text",
-              "iconSVG": "/static/media/icon.97c59b52.svg",
-              "topRow": 216,
-              "bottomRow": 254,
-              "parentRowSpace": 10,
-              "type": "TEXT_WIDGET",
-              "hideCard": false,
-              "animateLoading": true,
-              "overflow": "NONE",
-              "parentColumnSpace": 19.8125,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 41,
-              "dynamicBindingPathList": [
-                {
-                  "key": "text"
-                }
-              ],
-              "shouldTruncate": false,
-              "truncateButtonColor": "#FFC13D",
-              "text": "{{Table2.tableData}}",
-              "key": "wsiulvnoc0",
-              "rightColumn": 63,
-              "textAlign": "LEFT",
-              "widgetId": "svvnv6i1e4",
-              "isVisible": true,
-              "fontStyle": "BOLD",
-              "textColor": "#231F20",
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "fontSize": "PARAGRAPH"
-            },
-            {
               "zoomLevel": 65,
               "widgetName": "Map1",
-              "defaultMarkers": "[\n  {\n    \"lat\": {{locationData.selectedRow.lat}},\n    \"long\": {{locationData.selectedRow.long}},\n    \"title\": {{selectedName.text}}\n  }\n]",
+              "defaultMarkers": "[\n  {\n    \"lat\": {{fenzTable.selectedRow.lat}},\n    \"long\": {{fenzTable.selectedRow.long}},\n    \"title\": {{selectedName.text}}\n  }\n]",
               "dynamicPropertyPathList": [
                 {
                   "key": "mapCenter"
@@ -6930,7 +6375,7 @@
                 }
               ],
               "enablePickLocation": true,
-              "mapCenter": "{\n    \"lat\": {{locationData.selectedRow.lat}},\n    \"long\": {{locationData.selectedRow.long}}\n\t\t}",
+              "mapCenter": "{\n    \"lat\": {{locationTable.selectedRow.lat}},\n    \"long\": {{locationTable.selectedRow.long}}\n\t\t}",
               "isClickedMarkerCentered": true,
               "isDisabled": false,
               "enableSearch": true,
@@ -6942,468 +6387,19 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false
-            },
-            {
-              "template": {
-                "Image1": {
-                  "isVisible": true,
-                  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
-                  "imageShape": "RECTANGLE",
-                  "maxZoomLevel": 1,
-                  "enableRotation": false,
-                  "enableDownload": false,
-                  "objectFit": "contain",
-                  "image": "{{List1.listData.map((currentItem) => currentItem.img)}}",
-                  "widgetName": "Image1",
-                  "version": 1,
-                  "animateLoading": true,
-                  "type": "IMAGE_WIDGET",
-                  "hideCard": false,
-                  "displayName": "Image",
-                  "key": "4shitlk7px",
-                  "iconSVG": "/static/media/icon.52d8fb96.svg",
-                  "dynamicBindingPathList": [
-                    {
-                      "key": "image"
-                    }
-                  ],
-                  "dynamicTriggerPathList": [],
-                  "widgetId": "0s5qgiku0a",
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
-                  "leftColumn": 0,
-                  "rightColumn": 16,
-                  "topRow": 0,
-                  "bottomRow": 8,
-                  "parentId": "qgf3uyz0lk"
-                },
-                "Text3": {
-                  "isVisible": true,
-                  "text": "{{List1.listData.map((currentItem) => currentItem.name)}}",
-                  "fontSize": "PARAGRAPH",
-                  "fontStyle": "BOLD",
-                  "textAlign": "LEFT",
-                  "textColor": "#231F20",
-                  "truncateButtonColor": "#FFC13D",
-                  "widgetName": "Text3",
-                  "shouldTruncate": false,
-                  "overflow": "NONE",
-                  "version": 1,
-                  "animateLoading": true,
-                  "type": "TEXT_WIDGET",
-                  "hideCard": false,
-                  "displayName": "Text",
-                  "key": "u55xx907kl",
-                  "iconSVG": "/static/media/icon.97c59b52.svg",
-                  "textStyle": "HEADING",
-                  "dynamicBindingPathList": [
-                    {
-                      "key": "text"
-                    }
-                  ],
-                  "dynamicTriggerPathList": [],
-                  "widgetId": "3zib8zp74p",
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
-                  "leftColumn": 16,
-                  "rightColumn": 28,
-                  "topRow": 0,
-                  "bottomRow": 4,
-                  "parentId": "qgf3uyz0lk"
-                },
-                "Text4": {
-                  "isVisible": true,
-                  "text": "{{List1.listData.map((currentItem) => currentItem.id)}}",
-                  "fontSize": "PARAGRAPH",
-                  "fontStyle": "BOLD",
-                  "textAlign": "LEFT",
-                  "textColor": "#231F20",
-                  "truncateButtonColor": "#FFC13D",
-                  "widgetName": "Text4",
-                  "shouldTruncate": false,
-                  "overflow": "NONE",
-                  "version": 1,
-                  "animateLoading": true,
-                  "type": "TEXT_WIDGET",
-                  "hideCard": false,
-                  "displayName": "Text",
-                  "key": "u55xx907kl",
-                  "iconSVG": "/static/media/icon.97c59b52.svg",
-                  "textStyle": "BODY",
-                  "dynamicBindingPathList": [
-                    {
-                      "key": "text"
-                    }
-                  ],
-                  "dynamicTriggerPathList": [],
-                  "widgetId": "inyrcztkhw",
-                  "renderMode": "CANVAS",
-                  "isLoading": false,
-                  "leftColumn": 16,
-                  "rightColumn": 24,
-                  "topRow": 4,
-                  "bottomRow": 8,
-                  "parentId": "qgf3uyz0lk"
-                }
-              },
-              "widgetName": "List1",
-              "listData": [
-                {
-                  "id": "001",
-                  "name": "Blue",
-                  "img": "https://assets.appsmith.com/widgets/default.png"
-                },
-                {
-                  "id": "002",
-                  "name": "Green",
-                  "img": "https://assets.appsmith.com/widgets/default.png"
-                },
-                {
-                  "id": "003",
-                  "name": "Red",
-                  "img": "https://assets.appsmith.com/widgets/default.png"
-                }
-              ],
-              "isCanvas": true,
-              "displayName": "List",
-              "iconSVG": "/static/media/icon.9925ee17.svg",
-              "topRow": 219,
-              "bottomRow": 259,
-              "parentRowSpace": 10,
-              "type": "LIST_WIDGET",
-              "hideCard": false,
-              "gridGap": 0,
-              "animateLoading": true,
-              "parentColumnSpace": 19.8125,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 3,
-              "dynamicBindingPathList": [
-                {
-                  "key": "template.Image1.image"
-                },
-                {
-                  "key": "template.Text3.text"
-                },
-                {
-                  "key": "template.Text4.text"
-                }
-              ],
-              "gridType": "vertical",
-              "enhancements": true,
-              "children": [
-                {
-                  "widgetName": "Canvas13",
-                  "displayName": "Canvas",
-                  "topRow": 0,
-                  "bottomRow": 400,
-                  "parentRowSpace": 1,
-                  "type": "CANVAS_WIDGET",
-                  "canExtend": false,
-                  "hideCard": true,
-                  "dropDisabled": true,
-                  "openParentPropertyPane": true,
-                  "minHeight": 400,
-                  "noPad": true,
-                  "parentColumnSpace": 1,
-                  "leftColumn": 0,
-                  "children": [
-                    {
-                      "boxShadow": "NONE",
-                      "widgetName": "Container7",
-                      "borderColor": "transparent",
-                      "disallowCopy": true,
-                      "isCanvas": true,
-                      "displayName": "Container",
-                      "iconSVG": "/static/media/icon.1977dca3.svg",
-                      "topRow": 0,
-                      "bottomRow": 12,
-                      "dragDisabled": true,
-                      "type": "CONTAINER_WIDGET",
-                      "hideCard": false,
-                      "openParentPropertyPane": true,
-                      "isDeletable": false,
-                      "animateLoading": true,
-                      "leftColumn": 0,
-                      "children": [
-                        {
-                          "widgetName": "Canvas14",
-                          "detachFromLayout": true,
-                          "displayName": "Canvas",
-                          "widgetId": "qgf3uyz0lk",
-                          "containerStyle": "none",
-                          "topRow": 0,
-                          "parentRowSpace": 1,
-                          "isVisible": true,
-                          "type": "CANVAS_WIDGET",
-                          "canExtend": false,
-                          "version": 1,
-                          "hideCard": true,
-                          "parentId": "9h2tkzcrii",
-                          "renderMode": "CANVAS",
-                          "isLoading": false,
-                          "parentColumnSpace": 1,
-                          "leftColumn": 0,
-                          "children": [
-                            {
-                              "widgetName": "Image1",
-                              "displayName": "Image",
-                              "iconSVG": "/static/media/icon.52d8fb96.svg",
-                              "topRow": 0,
-                              "bottomRow": 8,
-                              "type": "IMAGE_WIDGET",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "dynamicTriggerPathList": [],
-                              "imageShape": "RECTANGLE",
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "image"
-                                }
-                              ],
-                              "leftColumn": 0,
-                              "defaultImage": "https://assets.appsmith.com/widgets/default.png",
-                              "key": "4shitlk7px",
-                              "image": "{{currentItem.img}}",
-                              "rightColumn": 16,
-                              "objectFit": "contain",
-                              "widgetId": "0s5qgiku0a",
-                              "logBlackList": {
-                                "isVisible": true,
-                                "defaultImage": true,
-                                "imageShape": true,
-                                "maxZoomLevel": true,
-                                "enableRotation": true,
-                                "enableDownload": true,
-                                "objectFit": true,
-                                "image": true,
-                                "widgetName": true,
-                                "version": true,
-                                "animateLoading": true,
-                                "type": true,
-                                "hideCard": true,
-                                "displayName": true,
-                                "key": true,
-                                "iconSVG": true,
-                                "isCanvas": true,
-                                "dynamicBindingPathList": true,
-                                "dynamicTriggerPathList": true,
-                                "minHeight": true,
-                                "widgetId": true,
-                                "renderMode": true,
-                                "isLoading": true,
-                                "parentColumnSpace": true,
-                                "parentRowSpace": true,
-                                "leftColumn": true,
-                                "rightColumn": true,
-                                "topRow": true,
-                                "bottomRow": true,
-                                "parentId": true
-                              },
-                              "isVisible": true,
-                              "version": 1,
-                              "parentId": "qgf3uyz0lk",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "maxZoomLevel": 1,
-                              "enableDownload": false,
-                              "enableRotation": false
-                            },
-                            {
-                              "widgetName": "Text3",
-                              "displayName": "Text",
-                              "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 0,
-                              "bottomRow": 4,
-                              "type": "TEXT_WIDGET",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "overflow": "NONE",
-                              "dynamicTriggerPathList": [],
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "text"
-                                }
-                              ],
-                              "leftColumn": 16,
-                              "shouldTruncate": false,
-                              "truncateButtonColor": "#FFC13D",
-                              "text": "{{currentItem.name}}",
-                              "key": "u55xx907kl",
-                              "rightColumn": 28,
-                              "textAlign": "LEFT",
-                              "widgetId": "3zib8zp74p",
-                              "logBlackList": {
-                                "isVisible": true,
-                                "text": true,
-                                "fontSize": true,
-                                "fontStyle": true,
-                                "textAlign": true,
-                                "textColor": true,
-                                "truncateButtonColor": true,
-                                "widgetName": true,
-                                "shouldTruncate": true,
-                                "overflow": true,
-                                "version": true,
-                                "animateLoading": true,
-                                "type": true,
-                                "hideCard": true,
-                                "displayName": true,
-                                "key": true,
-                                "iconSVG": true,
-                                "isCanvas": true,
-                                "textStyle": true,
-                                "dynamicBindingPathList": true,
-                                "dynamicTriggerPathList": true,
-                                "minHeight": true,
-                                "widgetId": true,
-                                "renderMode": true,
-                                "isLoading": true,
-                                "parentColumnSpace": true,
-                                "parentRowSpace": true,
-                                "leftColumn": true,
-                                "rightColumn": true,
-                                "topRow": true,
-                                "bottomRow": true,
-                                "parentId": true
-                              },
-                              "isVisible": true,
-                              "fontStyle": "BOLD",
-                              "textColor": "#231F20",
-                              "version": 1,
-                              "parentId": "qgf3uyz0lk",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "fontSize": "PARAGRAPH",
-                              "textStyle": "HEADING"
-                            },
-                            {
-                              "widgetName": "Text4",
-                              "displayName": "Text",
-                              "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 4,
-                              "bottomRow": 8,
-                              "type": "TEXT_WIDGET",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "overflow": "NONE",
-                              "dynamicTriggerPathList": [],
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "text"
-                                }
-                              ],
-                              "leftColumn": 16,
-                              "shouldTruncate": false,
-                              "truncateButtonColor": "#FFC13D",
-                              "text": "{{currentItem.id}}",
-                              "key": "u55xx907kl",
-                              "rightColumn": 24,
-                              "textAlign": "LEFT",
-                              "widgetId": "inyrcztkhw",
-                              "logBlackList": {
-                                "isVisible": true,
-                                "text": true,
-                                "fontSize": true,
-                                "fontStyle": true,
-                                "textAlign": true,
-                                "textColor": true,
-                                "truncateButtonColor": true,
-                                "widgetName": true,
-                                "shouldTruncate": true,
-                                "overflow": true,
-                                "version": true,
-                                "animateLoading": true,
-                                "type": true,
-                                "hideCard": true,
-                                "displayName": true,
-                                "key": true,
-                                "iconSVG": true,
-                                "isCanvas": true,
-                                "textStyle": true,
-                                "dynamicBindingPathList": true,
-                                "dynamicTriggerPathList": true,
-                                "minHeight": true,
-                                "widgetId": true,
-                                "renderMode": true,
-                                "isLoading": true,
-                                "parentColumnSpace": true,
-                                "parentRowSpace": true,
-                                "leftColumn": true,
-                                "rightColumn": true,
-                                "topRow": true,
-                                "bottomRow": true,
-                                "parentId": true
-                              },
-                              "isVisible": true,
-                              "fontStyle": "BOLD",
-                              "textColor": "#231F20",
-                              "version": 1,
-                              "parentId": "qgf3uyz0lk",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "fontSize": "PARAGRAPH",
-                              "textStyle": "BODY"
-                            }
-                          ],
-                          "key": "2bghdsyccz"
-                        }
-                      ],
-                      "borderWidth": "0",
-                      "key": "sedh92bx0g",
-                      "disablePropertyPane": true,
-                      "backgroundColor": "white",
-                      "rightColumn": 64,
-                      "widgetId": "9h2tkzcrii",
-                      "containerStyle": "card",
-                      "isVisible": true,
-                      "version": 1,
-                      "parentId": "wwf5zl9287",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "0"
-                    }
-                  ],
-                  "key": "2bghdsyccz",
-                  "rightColumn": 475.5,
-                  "detachFromLayout": true,
-                  "widgetId": "wwf5zl9287",
-                  "containerStyle": "none",
-                  "isVisible": true,
-                  "version": 1,
-                  "parentId": "gsatuuj3de",
-                  "renderMode": "CANVAS",
-                  "isLoading": false
-                }
-              ],
-              "privateWidgets": {
-                "Image1": true,
-                "Text3": true,
-                "Text4": true
-              },
-              "key": "csbvfopm1e",
-              "backgroundColor": "transparent",
-              "rightColumn": 27,
-              "itemBackgroundColor": "#FFFFFF",
-              "widgetId": "gsatuuj3de",
-              "isVisible": true,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false
             }
           ]
         },
         "layoutOnLoadActions": [
           [
             {
-              "id": "METRIC MANAGEMENT_locationFetch",
-              "name": "locationFetch",
+              "id": "METRIC MANAGEMENT_alarmFetch",
+              "name": "alarmFetch",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "METRIC MANAGEMENT_grossFetch",
               "name": "grossFetch",
@@ -7430,6 +6426,14 @@
           ],
           [
             {
+              "id": "METRIC MANAGEMENT_locationFetch",
+              "name": "locationFetch",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "METRIC MANAGEMENT_trcFetch",
               "name": "trcFetch",
               "confirmBeforeExecute": false,
@@ -7444,13 +6448,10 @@
         "widgetNames": [
           "Application",
           "Button1Copy",
-          "ButtonGroup1",
           "Canvas1",
           "Canvas10",
           "Canvas11",
           "Canvas12",
-          "Canvas13",
-          "Canvas14",
           "Canvas2Copy",
           "Canvas2CopyCopyCopy",
           "Canvas3CopyCopy",
@@ -7462,21 +6463,14 @@
           "Container4Copy",
           "Container5",
           "Container6",
-          "Container7",
           "IconButton1",
-          "Image1",
-          "List1",
           "MainContainer",
           "Map1",
           "SPETable1",
           "Table1",
           "Table1Copy",
-          "Table2",
           "Tabs",
           "Text1",
-          "Text2",
-          "Text3",
-          "Text4",
           "adjustmentContainer",
           "bbOrder",
           "bbissuedateInputCopy1",
@@ -7493,12 +6487,13 @@
           "customerCopy",
           "dateInsertCopy",
           "district",
+          "fenzTable",
           "firstContainer",
           "lastcipcause",
           "lastcipcauseCopyCopy",
           "lastreasonCopy",
           "leftJoinCombine",
-          "locationData",
+          "locationTable",
           "logTable",
           "matchmid",
           "matchmidCopy",
