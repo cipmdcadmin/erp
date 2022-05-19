@@ -43,7 +43,7 @@
               "displayName": "Table",
               "iconSVG": "/static/media/icon.db8a9cbd.svg",
               "topRow": 45,
-              "bottomRow": 88,
+              "bottomRow": 102,
               "isSortable": true,
               "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
@@ -244,12 +244,16 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "mid",
+                "name",
+                "provider",
+                "ms4",
+                "v2bbkpi",
+                "iso_dtg",
+                "comment",
+                "comments_from_dave",
                 "bb_issue_date",
                 "bb_combined_completion",
                 "Combined_HW_order",
-                "ms4",
-                "provider",
-                "name",
                 "address",
                 "region",
                 "application_date",
@@ -271,17 +275,14 @@
                 "obbr",
                 "rowIndex",
                 "timestamp",
-                "user",
-                "iso_dtg",
-                "comment",
-                "v2bbkpi"
+                "user"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
               "displayName": "Table",
               "iconSVG": "/static/media/icon.db8a9cbd.svg",
               "topRow": 45,
-              "bottomRow": 88,
+              "bottomRow": 102,
               "isSortable": true,
               "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
@@ -388,6 +389,9 @@
                 },
                 {
                   "key": "primaryColumns.ms4.computedValue"
+                },
+                {
+                  "key": "primaryColumns.comments_from_dave.computedValue"
                 }
               ],
               "leftColumn": 20,
@@ -504,7 +508,7 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
@@ -861,7 +865,7 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": true,
+                  "isVisible": false,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
@@ -936,6 +940,23 @@
                   "isDerived": false,
                   "label": "ms4",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.ms4))}}"
+                },
+                "comments_from_dave": {
+                  "index": 32,
+                  "width": 150,
+                  "id": "comments_from_dave",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "comments_from_dave",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.comments_from_dave))}}"
                 }
               },
               "delimiter": ",",
@@ -973,7 +994,9 @@
                 "timestamp": 221,
                 "v2bbkpi": 71,
                 "user": 111,
-                "iso_dtg": 125
+                "iso_dtg": 109,
+                "ms4": 91,
+                "comment": 190
               }
             },
             {

@@ -3125,17 +3125,18 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "mid",
-                        "name",
-                        "provider",
                         "bb_issue_date",
                         "bb_combined_completion",
                         "ms4",
+                        "provider",
+                        "name",
                         "application_date",
                         "v2bbkpi",
                         "customColumn1",
                         "comment",
-                        "address",
+                        "comments_from_dave",
                         "Combined_HW_order",
+                        "address",
                         "region",
                         "hw_cause",
                         "bb_cause",
@@ -3284,6 +3285,9 @@
                         },
                         {
                           "key": "primaryColumns.ms4.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.comments_from_dave.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -3859,6 +3863,23 @@
                           "isDerived": false,
                           "label": "ms4",
                           "computedValue": "{{SPETable1.sanitizedTableData.map((currentRow) => ( currentRow.ms4))}}"
+                        },
+                        "comments_from_dave": {
+                          "index": 32,
+                          "width": 150,
+                          "id": "comments_from_dave",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "comments_from_dave",
+                          "computedValue": "{{SPETable1.sanitizedTableData.map((currentRow) => ( currentRow.comments_from_dave))}}"
                         }
                       },
                       "delimiter": ",",
